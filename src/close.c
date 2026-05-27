@@ -19,10 +19,15 @@
  *  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  *  IN THE SOFTWARE.
  */
-#include <unistd.h>
+// depend
+#include "lauxhlib.h"
+#include "lua_errno.h"
 // lua
-#include <lauxhlib.h>
-#include <lua_errno.h>
+#include <lauxlib.h>
+// system
+#include <errno.h>
+#include <stdio.h>
+#include <unistd.h>
 
 static int closefp_lua(lua_State *L)
 {
